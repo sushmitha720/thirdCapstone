@@ -1,0 +1,21 @@
+<%- include("partials/header.ejs") %>
+
+<h1><%= post.title %></h1>
+<div class="container view">
+  <div class="row">
+    <div class="col">
+      <em style="float: right;"><%= post.date %></em>
+      <br>
+      <hr/>
+        <p>
+          <%= post.text %>
+        </p>
+          <a href="/edit/<%= index %>" class="btn btn-secondary">Edit</a>
+          <a href="/delete/<%= index %>" class="btn btn-danger">Delete</a>
+    </div>
+    
+  </div>
+  
+</div>
+
+  <%- include("partials/footer.ejs") %>

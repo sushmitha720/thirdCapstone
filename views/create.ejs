@@ -1,0 +1,23 @@
+<%- include("partials/header.ejs") %>
+
+<% if(locals.post) { %>
+<h1>Edit Blog Post</h1>
+<div class="contactform">
+  <form action="/createpost/<%= index %>" method="post">
+    <input name="title" type="text" class="feedback-input" value="<%= post.title %>" required/>
+    <textarea name="text" class="feedback-input" rows="80"><%= post.text %></textarea>
+    <input type="submit" class="contactbtn" value="POST" />
+  </form>
+</div>
+<% } else { %>
+  <h1>Create Blog Post</h1>
+  <div class="contactform">
+    <form action="/createpost" method="post">
+      <input name="title" type="text" class="feedback-input" placeholder="Title" required/>
+      <textarea name="text" class="feedback-input" placeholder="Type your post here..."></textarea>
+      <input type="submit" class="contactbtn" value="POST" />
+    </form>
+  </div>
+<% } %>
+
+<%- include("partials/footer.ejs") %>

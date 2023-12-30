@@ -6,13 +6,13 @@
     <div class="row py-3 firstblog">
       <div class="col-sm-12 pt-sm-0 pt-3">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body">            
+            <em><%= posts[posts.length-1].date %></em>
             <h5 class="card-title">
               <a href="/view/<%= posts.length-1 %>" class="stretched-link">
-                  <%= posts[posts.length-1].title %>
+              <h3><%= posts[posts.length-1].title %></h3>
               </a>
               </h5>
-            <em><%= posts[posts.length-1].date %></em>
             <p class="card-text">
               <%= posts[posts.length-1].text %>
             </p>
@@ -24,10 +24,11 @@
     <div class="row py-3">
       <div class="col-sm-6">
         <div class="card">
-          <div class="card-body">
-            <h5 class="card-title">
-              <a href="/view/<%= posts.length-2 %>" class="stretched-link"><%= posts[posts.length-2].title %></a></h5>
+          <div class="card-body">            
             <em><%= posts[posts.length-2].date %></em>
+            <h5 class="card-title">
+              <a href="/view/<%= posts.length-2 %>" class="stretched-link">
+               <h4> <%= posts[posts.length-2].title %></h4></a></h5>
             <p class="card-text"><%= posts[posts.length-2].text %></p>
           </div>
         </div>
@@ -35,10 +36,11 @@
       <% if (posts.length > 2) { %>    
       <div class="col-sm-6 pt-sm-0 pt-3">
         <div class="card">
-          <div class="card-body">
+          <div class="card-body"><em><%= posts[posts.length-3].date %></em>
             <h5 class="card-title">
-              <a href="/view/<%= posts.length-3 %>" class="stretched-link"><%= posts[posts.length-3].title %></a></h5>
-            <em><%= posts[posts.length-3].date %></em>
+              <a href="/view/<%= posts.length-3 %>" class="stretched-link">
+                <h4><%= posts[posts.length-3].title %></h4></a></h5>
+            
             <p class="card-text"><%= posts[posts.length-3].text %></p>
           </div>
         </div>
